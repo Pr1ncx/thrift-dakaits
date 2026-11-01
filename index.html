@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THRIFT DAKAITS — Give Clothes A Second Chance | Premium Branded Thrift &amp; Vintage</title>
+  <meta name="description"
+    content="Thrift Dakaits — Give Clothes A Second Chance. Curated premium branded thrift, streetwear, and rare vintage apparel." />
+
+  <!-- Google Fonts: Inter, Syne & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700;800&family=Syne:wght@700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Floating Cart Trigger (Minimal, Non-Intrusive) -->
+  <button class="floating-cart" id="floating-cart-btn" aria-label="Open cart drawer">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+      <line x1="3" y1="6" x2="21" y2="6" />
+      <path d="M16 10a4 4 0 01-8 0" />
+    </svg>
+    <span class="floating-cart__count" id="header-cart-count">0</span>
+  </button>
+
+  <!-- Fixed Diagonal Curtain Wipe Background -->
+  <div class="curtain-bg" id="curtain-bg" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       MAIN SCROLLABLE CONTENT (Views 1–3)
+  ══════════════════════════════════════════════════════════ -->
+  <main id="main-scroll">
+
+    <!-- ─── B · VIEW 1 — THRIFT DAKAITS HERO (NOAH GRAY FRAMER STYLE) ──── -->
+    <section id="view-hero" class="section section--hero framer-hero-section">
+      <div class="framer-1rb3rmm">
+
+        <!-- Top-Left Heading: THRIFT (Base: Pure White on Royal Blue) -->
+        <div class="framer-title-top">
+          <h1 class="framer-title framer-title--top">THRIFT</h1>
+        </div>
+
+    <!-- Hero 3D Scene (Noah Gray Aesthetic: White Sphere + Curved Black Metallic Ribbons) -->
+    <div class="framer-media" id="hero-store-frame" role="img" aria-label="A white sphere suspended among curved black metallic ribbons.">
+      <div id="hero-three-container" class="framer-media-three"></div>
+      <img src="assets/thrift-dakaits-storefront.jpg" alt="Thrift Dakaits Storefront" class="framer-media-img framer-media-img--fallback" style="display:none;" />
+    </div>
+
+        <!-- Bottom-Right Heading: DAKAITS (Base: Pure White on Royal Blue) -->
+        <div class="framer-title-bottom">
+          <div class="framer-title framer-title--bottom">DAKAITS</div>
+        </div>
+
+        <!-- Difference Inversion Layer (Clipped to Storefront Image Bounds Only) -->
+        <div class="framer-diff-overlay" id="framer-diff-overlay" aria-hidden="true">
+          <div class="framer-title-top">
+            <div class="framer-title framer-title--top">THRIFT</div>
+          </div>
+          <div class="framer-title-bottom">
+            <div class="framer-title framer-title--bottom">DAKAITS</div>
+          </div>
+        </div>
+
+        <!-- Editorial Description & Dual CTA Actions -->
+        <div class="framer-hero-footer">
+          <p class="framer-desc">
+            GIVING CLOTHES A SECOND CHANCE. WE CURATE RARE ARCHIVAL STREETWEAR AND ICONIC 90S–2000S APPAREL THROUGH STRATEGY, ETHICAL SOURCING, AND AUTHENTIC RESTORATION.
+          </p>
+          <div class="framer-1hkbb8t">
+            <a href="#view-collection" class="framer-btn framer-btn--primary" id="hero-btn-collection">
+              <span class="framer-btn__slot">
+                <span class="framer-btn__label">LET'S WORK TOGETHER</span>
+                <span class="framer-btn__label framer-btn__label--clone" aria-hidden="true">DISCOVER DROP</span>
+              </span>
+            </a>
+            <a href="#collection-lineup" class="framer-btn framer-btn--secondary" id="hero-btn-archive">
+              <span class="framer-btn__slot">
+                <span class="framer-btn__label">VIEW SELECTED WORK</span>
+                <span class="framer-btn__label framer-btn__label--clone" aria-hidden="true">VIEW SELECTED WORK</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── C · VIEW 2 — Collection Lineup (Hang Rail Showcase with Pendulum Physics) ──── -->
+    <section id="view-collection" class="rk-sec">
+      <div class="rk-wrap">
+        <!-- Rail Caption -->
+        <div class="rk-railcap">
+          <p>NEW COLLECTION</p>
+          <span class="rk-railcap-sep"></span>
+          <p class="rk-railcap-dim">PREMIUM STREETWEAR</p>
+        </div>
+
+        <!-- Overhead Rod + Garment Rack Stage -->
+        <div class="rk-stage">
+          <div class="rk-rod" aria-hidden="true">
+            <div class="rk-rod-bar"></div>
+          </div>
+          <!-- Horizontal Draggable Rack -->
+          <div class="rk-rack" id="rack-viewport" style="--rk-h: 410px; --rk-gap: 22px;"></div>
+        </div>
+
+        <!-- Active Piece Caption & CTA -->
+        <div class="rk-caption">
+          <div class="rk-cap-name" id="rk-active-title">
+            <p>Nike Total 90 Track Jacket</p>
+          </div>
+          <div class="rk-cta-w">
+            <button class="rk-cta rk-cta-primary" id="rk-active-cta">
+              <span>Shop the Collection</span>
+              <span class="btn__arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════
+       E · VIEW 4 — 50/50 Split-Screen PDP (Overlay)
+  ══════════════════════════════════════════════════════════ -->
+  <section id="view-pdp" class="pdp" aria-hidden="true">
+    <!-- Left Column: Sticky Visual Stage (50vw, 100vh) -->
+    <div class="pdp__left" id="pdp-left">
+      <!-- Dynamic Top-Left Brand Emblem (updates fill color) -->
+      <div class="pdp__emblem" id="pdp-emblem">
+        <svg viewBox="0 0 74 38" width="74" height="38">
+          <circle cx="20" cy="19" r="18" fill="var(--emblem-bg-left, #0d1943)" opacity="0.9" />
+          <text x="20" y="24" text-anchor="middle" font-size="10" font-weight="900" fill="#fff"
+            font-family="'Syne',sans-serif">TD</text>
+          <circle cx="53" cy="19" r="18" fill="var(--emblem-bg-right, #1a1a4e)" />
+          <text x="53" y="24" text-anchor="middle" font-size="9" font-weight="900" fill="#fff"
+            font-family="'Syne',sans-serif">2026</text>
+        </svg>
+      </div>
+
+      <!-- Center Cutout / Detail Tag Stage -->
+      <div class="pdp__stage" id="pdp-stage">
+        <img src="assets/clean-product-nike-t90.jpg" alt="Thrift Dakaits Garment" id="pdp-image" class="pdp__image" />
+      </div>
+
+      <!-- Navigation Arrows to toggle Full Garment vs Authentic Tag Detail -->
+      <button class="pdp__arrow pdp__arrow--prev" id="pdp-prev" aria-label="Previous view">←</button>
+      <button class="pdp__arrow pdp__arrow--next" id="pdp-next" aria-label="Next view">→</button>
+    </div>
+
+    <!-- Right Column: Scrollable Archival Spec Sheet (max-width: 732px reading well) -->
+    <div class="pdp__right" id="pdp-right">
+      <div class="pdp__well">
+        <!-- Top Compact Price Tag -->
+        <div class="pdp__price" id="pdp-price">$179.00</div>
+
+        <!-- Title Block -->
+        <h1 class="pdp__title" id="pdp-title">Nike Total 90 Track Jacket</h1>
+        <h3 class="pdp__subtitle" id="pdp-subtitle">Midnight Navy / Neon Volt · 2004 Total 90</h3>
+
+        <!-- Archival Description & High-Density Specs -->
+        <div class="pdp__desc" id="pdp-desc">
+          <p>An authentic 2000s Total 90 football training jacket preserved in pristine vintage condition. Features the
+            iconic embroidered T90 chest medallion, contrast volt collar lining, and breathable athletic mesh interior:
+          </p>
+          <ul>
+            <li>Chest / Pit-to-Pit: 22.5" (relaxed athletic fit)</li>
+            <li>Length: 28.5" collar to bottom hem</li>
+            <li>Tag Size: Men's M (true to size)</li>
+            <li>Era: Autumn/Winter 2004 (Nike Total 90 golden era)</li>
+          </ul>
+          <p>Carefully hand-sourced by the Thrift Dakaits team. Each vintage item undergoes deep eco-sanitization and
+            meticulous stitch-inspection to guarantee 100% authenticity and wearable longevity.</p>
+        </div>
+
+        <!-- Live Variant Switcher (4 Thumbnail Cards + +2 Indicator) -->
+        <div class="pdp__variants" id="pdp-variants"></div>
+
+        <!-- Purchase Action Row -->
+        <div class="pdp__purchase">
+          <div class="stepper" id="pdp-stepper">
+            <button class="stepper__btn" id="qty-minus" aria-label="Decrease quantity">−</button>
+            <span class="stepper__val" id="pdp-qty">1</span>
+            <button class="stepper__btn" id="qty-plus" aria-label="Increase quantity">+</button>
+          </div>
+          <button class="btn btn--pill btn--full" id="pdp-add-cart">
+            <span>Add to Cart</span>
+            <span class="btn__arrow">→</span>
+          </button>
+        </div>
+
+        <!-- Technical Archival Accordions -->
+        <div class="pdp__accordions" id="pdp-accordions">
+          <details class="accordion" open>
+            <summary class="accordion__head"><span>Item Specifications</span><span class="accordion__icon">+</span>
+            </summary>
+            <div class="accordion__body">
+              <p>Material: 100% Ripstop Nylon Shell · Lining: Polyester Airflow Mesh · Hardware: Full front zipper with
+                branded Nike pull · Pockets: Dual zip-secured hand warmer pockets.</p>
+            </div>
+          </details>
+          <details class="accordion">
+            <summary class="accordion__head"><span>Condition &amp; Authentication</span><span
+                class="accordion__icon">+</span></summary>
+            <div class="accordion__body">
+              <p>Condition Grade: 9.5/10 (Excellent Vintage). Original neck label, wash codes, and T90 embroidery fully
+                intact with zero rips or fabric pulls. Authenticity guaranteed.</p>
+            </div>
+          </details>
+          <details class="accordion">
+            <summary class="accordion__head"><span>Measurements &amp; Fit Guide</span><span
+                class="accordion__icon">+</span></summary>
+            <div class="accordion__body">
+              <p>Pit to pit: 22.5" · Length: 28.5" · Sleeve from neck seam: 31.0". Fits comfortably for M or slightly
+                slim L.</p>
+            </div>
+          </details>
+          <details class="accordion">
+            <summary class="accordion__head"><span>Shipping &amp; Store Pickup</span><span
+                class="accordion__icon">+</span></summary>
+            <div class="accordion__body">
+              <p>Fast pan-India dispatch within 24 hours. Free shipping across India on orders over ₹999. In-store
+                pickup available at Thrift Dakaits storefront. WhatsApp: 7986729527.</p>
+            </div>
+          </details>
+        </div>
+
+        <button class="pdp__back" id="pdp-back">← Back to collection</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       F · VIEW 5 — Slide-Out Cart Drawer + Translucent Backdrop
+  ══════════════════════════════════════════════════════════ -->
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart drawer">
+    <div class="cart-drawer__head">
+      <h2 class="cart-drawer__title">Cart <span id="cart-drawer-count">(0)</span></h2>
+      <button class="cart-drawer__close" id="cart-close" aria-label="Close cart drawer">✕</button>
+    </div>
+    <div class="cart-drawer__body" id="cart-body">
+      <p class="cart-drawer__empty" id="cart-empty">Your thrift basket is empty</p>
+    </div>
+    <div class="cart-drawer__foot" id="cart-foot" style="display:none;">
+      <div class="cart-drawer__subtotal">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">$0.00</span>
+      </div>
+      <p class="cart-drawer__notice">Shipping, taxes, and packaging calculated at checkout.</p>
+      <button class="btn btn--pill btn--full" id="cart-checkout">
+        <span>Go to checkout</span>
+        <span class="btn__arrow">→</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- CDN Motion Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <!-- Three.js 3D & Post-Processing Pipeline -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/FilmShader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/FilmPass.js"></script>
+  <script src="app.js?v=3"></script>
+</body>
+
+</html>

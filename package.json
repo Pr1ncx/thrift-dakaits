@@ -1,0 +1,9 @@
+{
+  "name": "thrift-dakaits",
+  "version": "1.0.0",
+  "description": "Thrift Dakaits — Archival Thrift Store",
+  "scripts": {
+    "dev": "npx serve -l 3000 .",
+    "start": "npx serve -l 3000 ."
+  }
+}
